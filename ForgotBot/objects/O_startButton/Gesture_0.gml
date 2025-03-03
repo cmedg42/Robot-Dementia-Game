@@ -1,3 +1,9 @@
+// play clock sound
+// sound name, priority, loop, gain, offset, pitch, listener_mask
+audio_play_sound(A_Atmo_clock, 1, true, 1.0,0);
+
+audio_play_sound(A_Atmo_quiet_cellblock_amb, 1, true, 1.0,0);
+
 room_goto(R_bed1)
 O_HUD_transition1.visible= false;
 O_taskBox.visible= true;

@@ -1,3 +1,7 @@
+// play move sound
+// sound name, priority, loop, gain, offset, pitch, listener_mask
+audio_play_sound(A_Bot_move, 1, false, 1.0,0,random_range(.5, 1.1));
+
 O_HUD_transition1.visible= true;
 O_HUD_transition1.image_alpha= .8;
 alarm_set(0,6);
@@ -28,6 +32,9 @@ if room = R_mainFloor4
 
 if room = R_mainFloor7
     room_goto(R_mainFloor2);
+
+if room = R_mainFloor6
+    room_goto(R_mainFloor3);
 
 //kitchen
 
