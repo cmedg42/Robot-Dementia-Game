@@ -38,9 +38,11 @@ if room= R_restroom_mirror
 
 
 //main floor
+if global.taskComplete_payRespects = false{
+    if room= R_mainFloor1
+        room_goto(R_mainFloor2);
+}
 
-if room= R_mainFloor1
-    room_goto(R_mainFloor2);
 
 if room= R_mainFloor5
     room_goto(R_mainFloor3);
@@ -58,9 +60,13 @@ if room= R_bedStairs3
     room_goto(R_bedStairs5);
 
 //downstairs
+if global.taskComplete_payRespects = false{
+    if room= R_downstairs_13
+        room_goto(R_downstairs_1);
+}
 
-if room= R_downstairs_13
-    room_goto(R_downstairs_1);
+
+
 
 // church
 

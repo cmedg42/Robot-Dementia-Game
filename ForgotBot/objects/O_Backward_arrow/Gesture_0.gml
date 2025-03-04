@@ -140,8 +140,10 @@ if room = R_downstairs_12
 
 if room= R_kitchen2_open_food_gone
     room_goto(R_kitchen5);
-   
 
+if room= R_kitchen_door_1
+    room_goto(R_kitchen5);
+   
 if room= R_kitchen1
     room_goto(R_kitchen4);
 
@@ -152,6 +154,13 @@ if room= R_basement_13{
     O_HUD_transition1.image_alpha= 1;
     alarm_set(0,15);
     room_goto(R_church_1);
+}
+
+if room= R_church_7{
+    O_HUD_transition2.visible= true;
+    O_HUD_transition2.image_alpha= 1;
+    alarm_set(0,15);
+    room_goto(R_downstairs_13);
 }
 
 

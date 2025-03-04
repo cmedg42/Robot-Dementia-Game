@@ -18,4 +18,10 @@ global.tC_feedDog = false;
 global.taskComplete_investigateBasement =false;
 global.tC_iB = false;
 
+global.taskComplete_payRespects =false;
+global.tC_pay = false;
+
+global.taskComplete_unlockKitchenDoor =false;
+global.tC_kitDoor = false;
+
 

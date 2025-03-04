@@ -136,12 +136,28 @@ if room = R_kitchen4
 
 if room = R_kitchen5
     room_goto(R_mainFloor6);
+
+if room = R_kitchen_door_2
+    room_goto(R_kitchen_door_3);
+
+if room = R_kitchen_door_3
+    room_goto(R_kitchen_door_4);
+
+if room = R_kitchen1{
+    room_goto(R_kitchen_door_1);
+}
+
+
+
+
    
 
 //downstairs
+if global.taskComplete_payRespects = false{
+    if room = R_mainFloor2
+        room_goto(R_downstairs_1);
+}
 
-if room = R_mainFloor2
-    room_goto(R_downstairs_1);
 
 if room = R_downstairs_1
     room_goto(R_downstairs_3);

@@ -15,6 +15,7 @@ if image_index= 80 {
     O_Forward_arrow.visible= true;
     O_Backward_arrow.visible= true;
     room_goto(R_kitchen2);
+    audio_stop_sound(A_church_outside);
 }
 
 
