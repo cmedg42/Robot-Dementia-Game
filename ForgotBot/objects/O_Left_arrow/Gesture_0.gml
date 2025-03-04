@@ -23,6 +23,16 @@ if room= R_bedStairs1
 if room= R_bedHall5
     room_goto(R_bedHall8);
 
+//restroom
+
+if room= R_restroom2
+    room_goto(R_restroom_mirror);
+
+if room= R_restroom_mirror
+    room_goto(R_restroom6);
+
+
+
 
 
 
@@ -51,5 +61,17 @@ if room= R_bedStairs3
 
 if room= R_downstairs_13
     room_goto(R_downstairs_1);
+
+// church
+
+if room= R_church_R6
+    room_goto(R_church_R7);
+
+if room= R_church_4
+    room_goto(R_church_L1);
+
+if room= R_church_6
+    room_goto(R_church_2L_1);
+
 
 

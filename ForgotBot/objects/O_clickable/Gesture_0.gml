@@ -25,4 +25,11 @@ instance_destroy(O_clickable);
     
 }
 
+if room = R_basement_2{
+    room_goto(R_basement_3);
+    instance_destroy(O_clickable);
+    audio_play_sound(A_Bot_lightSwitch,1,false);
+    
+}
+
 

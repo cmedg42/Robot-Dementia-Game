@@ -13,8 +13,8 @@
   ],
   "name":"R_basement_4",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"startHouse_basement",
+    "path":"folders/Rooms/startHouse_basement.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

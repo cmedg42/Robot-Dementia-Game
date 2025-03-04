@@ -17,13 +17,22 @@ if room= R_bedHall5
 if room= R_bedHall11
     room_goto(R_bedHall10);
 
-// bathroom 
+// restroom 
 
 if room = R_restroom1
     room_goto(R_restroom2);
 
 if room = R_bedHall12
     room_goto(R_bedStairs1);
+
+if room= R_restroom5
+    room_goto(R_restroom_mirror);
+
+if room= R_restroom_mirror
+    room_goto(R_restroom3);
+
+if room= R_restroom6
+    room_goto(R_restroom_mirror);
 
 // main floor
 
@@ -51,6 +60,17 @@ if room= R_downstairs_11
 
 if room= R_downstairs_4
     room_goto(R_downstairs_12);
+
+// church
+
+if room= R_church_4
+    room_goto(R_church_R1);
+
+if room= R_church_L6
+    room_goto(R_church_L7);
+
+if room= R_church_6
+    room_goto(R_church_2R_1);
 
 
 

@@ -26,6 +26,8 @@ if room = R_bedroom7
     room_goto(R_bedroom_window);
 
 if room = R_bedroom1{
+    global.taskComplete_wakeup= true;
+    
     if global.taskComplete_firstDoorOpened = false {
         room_goto(R_bedroom2);
     }
@@ -134,6 +136,7 @@ if room = R_kitchen4
 
 if room = R_kitchen5
     room_goto(R_mainFloor6);
+   
 
 //downstairs
 
@@ -174,9 +177,6 @@ if room = R_downstairs_doorOpen3
 // basement
 if room = R_basement_1
     room_goto(R_basement_2);
-
-if room = R_basement_2
-    room_goto(R_basement_3);
 
 if room = R_basement_3
     room_goto(R_basement_4);
@@ -224,6 +224,91 @@ if room = R_downstairs_13
     room_goto(R_mainFloor1);
 
 // church 
+
+if room= R_church_1
+    room_goto(R_church_2);
+
+if room= R_church_2
+    room_goto(R_church_3);
+
+if room= R_church_3
+    room_goto(R_church_4);
+
+if room= R_church_R1
+    room_goto(R_church_R2);
+
+if room= R_church_R2
+    room_goto(R_church_R3);
+
+if room= R_church_R3
+    room_goto(R_church_R4);
+
+if room= R_church_R4
+    room_goto(R_church_R5);
+
+if room= R_church_R5
+    room_goto(R_church_R6);
+
+if room= R_church_R7
+    room_goto(R_church_R8);
+
+if room= R_church_R8
+    room_goto(R_church_R9);
+
+if room= R_church_R9
+    room_goto(R_church_5);
+
+if room= R_church_5
+    room_goto(R_church_6);
+
+if room= R_church_L1
+    room_goto(R_church_L2);
+
+if room= R_church_L2
+    room_goto(R_church_L3);
+
+if room= R_church_L3
+    room_goto(R_church_L4);
+
+if room= R_church_L4
+    room_goto(R_church_L5);
+
+if room= R_church_L1
+    room_goto(R_church_L2);
+
+if room= R_church_L2
+    room_goto(R_church_L3);
+
+if room= R_church_L3
+    room_goto(R_church_L4);
+
+if room= R_church_L5
+    room_goto(R_church_L6);
+
+if room= R_church_L7
+    room_goto(R_church_L8);
+
+if room= R_church_L8
+    room_goto(R_church_5);
+
+if room= R_church_2L_1
+    room_goto(R_church_2L_2);
+
+if room= R_church_2R_1
+    room_goto(R_church_2R_2);
+
+if room= R_church_2R_2
+    room_goto(R_church_7);
+
+if room= R_church_2L_2
+    room_goto(R_church_7);
+
+
+
+
+
+
+
 
 
 

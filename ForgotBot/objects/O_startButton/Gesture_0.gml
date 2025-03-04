@@ -5,6 +5,11 @@ audio_play_sound(A_Atmo_clock, 1, true, 1.0,0);
 audio_play_sound(A_Atmo_quiet_cellblock_amb, 1, true, 1.0,0);
 
 room_goto(R_bed1)
+
+// skip to church (testing)
+//room_goto(R_church_1)
+
+
 O_HUD_transition1.visible= false;
 O_taskBox.visible= true;
     O_HUD_frame.visible= true;
