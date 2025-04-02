@@ -119,7 +119,7 @@ if room= R_mainFloor2
 
 if room= R_downstairs_8{
     global.taskComplete_CheckDog=true;
-       room_goto(R_cutscenes);
+       room_goto(R_Cutscene_DogRunning);
     audio_stop_all();
 }
  

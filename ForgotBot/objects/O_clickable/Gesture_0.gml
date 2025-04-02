@@ -35,7 +35,7 @@ if room = R_basement_2{
 if room = R_kitchen_door_1{
     if global.taskComplete_payRespects= true{
         audio_play_sound(A_Bot_lightSwitch,1,false);
-        room_goto(R_kitchen_door_puzzle);
+        room_goto(R_Cutscene_kitchenPuzzleZoom);
         instance_destroy(O_clickable);
     }
     
