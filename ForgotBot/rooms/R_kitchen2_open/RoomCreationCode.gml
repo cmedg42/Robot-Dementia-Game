@@ -1,1 +1,0 @@
-audio_play_sound(A_Atmo_doorOpen2,1,false);

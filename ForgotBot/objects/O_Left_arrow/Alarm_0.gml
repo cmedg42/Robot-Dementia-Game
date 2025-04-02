@@ -1,1 +1,0 @@
-O_HUD_transition1.visible= false;
