@@ -1,0 +1,3 @@
+
+global.taskComplete_teaPot3= true;
+instance_destroy(O_TT_kettle_3_TVKitchen_cupboard_door2)

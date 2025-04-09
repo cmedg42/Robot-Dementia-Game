@@ -1,0 +1,1 @@
+O_diningDoorPuzzle_zoom.visible=false;

@@ -8,8 +8,8 @@
   "name":"O_HUD_transition2",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"HUD",
+    "path":"folders/Objects/HUD.yy",
   },
   "parentObjectId":null,
   "persistent":true,

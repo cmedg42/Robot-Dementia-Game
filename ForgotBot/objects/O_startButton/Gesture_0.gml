@@ -6,11 +6,48 @@
 
 
 
-//room_goto(R_bed1);
-room_goto(R_Cutscene_intro);
 
-// skip to key puzzle (testing)
-//room_goto()
+
+
+
+
+room_goto(R_Cutscene_intro);
+/*
+room_goto(R_dining_1);
+
+global.taskComplete_wakeup = true;
+global.taskComplete_firstDoorOpened = true;
+global.taskComplete_bathroom= true;
+global.taskComplete_CheckDog = true;
+global.taskComplete_feedDog =true;
+global.taskComplete_investigateBasement =true;
+global.taskComplete_payRespects =true;
+global.taskComplete_unlockKitchenDoor =true;
+global.taskComplete_afterKitchen_door= true;
+global.taskComplete_makeTea1 =true;
+global.taskComplete_makeTea2 =true;
+global.taskComplete_makeTea3 =true;
+global.taskComplete_makeTea4 =true;
+global.taskComplete_makeTea5 =true;
+global.taskComplete_answerPhone1 =true;
+global.tC_doorUnlockVideo= true;
+global.taskComplete_checkMailbox =true;
+global.taskComplete_run =true;
+global.taskComplete_unlockDiningDoor=false;
+global.taskComplete_restorePower=false;
+
+
+O_HUD_frame.visible=true;
+O_HUD_frame.depth=1;
+
+
+
+
+
+
+
+
+
 
 
 //O_HUD_transition1.visible= false;

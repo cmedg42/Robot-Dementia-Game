@@ -11,8 +11,8 @@
   "name":"O_Bot_keyRingArm_7",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"ROBOTArm",
+    "path":"folders/Objects/ROBOTArm.yy",
   },
   "parentObjectId":null,
   "persistent":false,

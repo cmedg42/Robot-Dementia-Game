@@ -1,0 +1,1 @@
+room_goto(R_mail_outside_cutscene);

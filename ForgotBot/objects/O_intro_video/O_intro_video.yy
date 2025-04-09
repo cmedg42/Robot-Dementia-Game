@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"S_intro_video",
-    "path":"sprites/S_intro_video/S_intro_video.yy",
+    "name":"S_metal01",
+    "path":"sprites/S_metal01/S_metal01.yy",
   },
   "spriteMaskId":null,
   "visible":true,

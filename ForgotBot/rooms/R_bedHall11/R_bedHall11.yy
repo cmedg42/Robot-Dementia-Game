@@ -13,8 +13,8 @@
   ],
   "name":"R_bedHall11",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"1st  Area  (Alpha)",
+    "path":"folders/Rooms/1st  Area  (Alpha).yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -1,0 +1,1 @@
+room_goto(R_Hunt_TVKitchen_cupboard_base);

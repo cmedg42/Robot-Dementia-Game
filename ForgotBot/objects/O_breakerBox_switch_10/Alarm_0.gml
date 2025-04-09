@@ -1,0 +1,2 @@
+audio_stop_sound(A_breaker_zap);
+instance_destroy(O_breakerBox_zap_video);

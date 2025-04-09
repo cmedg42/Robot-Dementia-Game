@@ -1,4 +1,4 @@
- video_close();
+video_close();
 room_goto(R_bed1);
 
 audio_play_sound(A_Atmo_clock, 1, true, 1.0,0);

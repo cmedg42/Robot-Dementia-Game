@@ -18,7 +18,7 @@
   "name":"R_basement_2",
   "parent":{
     "name":"startHouse_basement",
-    "path":"folders/Rooms/startHouse_basement.yy",
+    "path":"folders/Rooms/1st  Area  (Alpha)/startHouse_basement.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

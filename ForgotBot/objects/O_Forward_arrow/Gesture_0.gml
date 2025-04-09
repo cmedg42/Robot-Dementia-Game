@@ -13,7 +13,7 @@ if room= R_start
     room_goto(R_bed1);
 
 
-// sleeping in bed
+// -------------------------------------------------------------------Start House Sleeping in Bed----------------------------------------------------------------------
 if room = R_bed1
     room_goto(R_bed2);
 
@@ -21,7 +21,7 @@ if room = R_bed2
     room_goto(R_bedroom1);
 
 
-// bedroom
+// -------------------------------------------------------------------Start House Bedroom----------------------------------------------------------------------
 if room = R_bedroom7
     room_goto(R_bedroom_window);
 
@@ -41,7 +41,7 @@ if room = R_bedroom2
     room_goto(R_bedroom3);
 
 
-// first bedroom door opened
+// -------------------------------------------------------------------Start House First Door opened----------------------------------------------------------------------
 if room = R_bedroom3_open{
     global.taskComplete_firstDoorOpened= true;
     room_goto(R_bedHall1);
@@ -51,7 +51,7 @@ if room = R_bedroom6
     room_goto(R_bedroom7);
 
 
-// bedroom hall
+// -------------------------------------------------------------------Start House Bedroom Hall----------------------------------------------------------------------
 
 if room = R_bedHall1
     room_goto(R_bedHall8);
@@ -71,7 +71,7 @@ if room = R_bedHall6
 if room = R_bedHall7
     room_goto(R_bedHall8);
 
-// bathroom 
+// -------------------------------------------------------------------Start House Restroom---------------------------------------------------------------------- 
 
 if room = R_bedHall8{
         room_goto(R_restroom1);
@@ -99,7 +99,7 @@ if room = R_bedHall12
     room_goto(R_bedHall10);
 
 
-// bed stairs 
+// -------------------------------------------------------------------Start House Bedroom Stairs---------------------------------------------------------------------- 
 
 if room = R_bedStairs1
     room_goto(R_bedStairs2);
@@ -115,7 +115,7 @@ if room = R_bedStairs4
 
 
 
-// main floor
+// -------------------------------------------------------------------Start House Main Floor-----------------------------------------------------------------------------------
 
 if room = R_bedStairs3
     room_goto(R_mainFloor1);
@@ -129,7 +129,7 @@ if room = R_mainFloor6
 if room = R_mainFloor3
     room_goto(R_kitchen1);
 
-//kitchen
+// -------------------------------------------------------------------Start House Kitchen-----------------------------------------------------------------------------------
 
 if room = R_kitchen4
     room_goto(R_mainFloor6);
@@ -147,12 +147,41 @@ if room = R_kitchen1{
     room_goto(R_kitchen_door_1);
 }
 
+if room = R_kitchen_windowHall_4{
+    room_goto(R_kitchen_windowHall_3);
+}
+
+if room = R_kitchen_windowHall_3{
+    if global.taskComplete_answerPhone1=true{
+        if global.taskComplete_run=false{
+            room_goto(R_mail_kitchen_1);
+        }
+    }
+    
+    if global.taskComplete_run=true{
+        room_goto(R_kitchen4);
+    }
+    
+}
+
+if room = R_mail_kitchen_1{
+    room_goto(R_mail_kitchen_2);
+}
+
+if room = R_mail_kitchen_2{
+    room_goto(R_mail_kitchen_3);
+}
+
+if room = R_mail_kitchen_3{
+    room_goto(R_mail_outside_1);
+}
+
 
 
 
    
 
-//downstairs
+// -------------------------------------------------------------------Dog Downstairs-----------------------------------------------------------------------------------
 if global.taskComplete_payRespects = false{
     if room = R_mainFloor2
         room_goto(R_downstairs_1);
@@ -168,9 +197,10 @@ if room = R_downstairs_3
 if room = R_downstairs_4
     room_goto(R_downstairs_6);
 
-if global.taskComplete_CheckDog = false
+if global.taskComplete_CheckDog = false{
     if room = R_downstairs_6
         room_goto(R_downstairs_7); 
+}
 
 if global.taskComplete_CheckDog = true{
     if room = R_downstairs_6
@@ -184,13 +214,11 @@ if room = R_downstairs_doorOpen1
     room_goto(R_downstairs_doorOpen2);
 
 if room = R_downstairs_doorOpen2
-    room_goto(R_downstairs_doorOpen3);
-
-if room = R_downstairs_doorOpen3
     room_goto(R_basement_1);
 
 
-// basement
+
+// ------------------------------------------------------------------- Start House Basement-----------------------------------------------------------------------------------
 if room = R_basement_1
     room_goto(R_basement_2);
 
@@ -239,7 +267,7 @@ if room = R_downstairs_12
 if room = R_downstairs_13
     room_goto(R_mainFloor1);
 
-// church 
+// -------------------------------------------------------------------Church----------------------------------------------------------------------------------- 
 
 if room= R_church_1
     room_goto(R_church_2);
@@ -319,6 +347,55 @@ if room= R_church_2R_2
 if room= R_church_2L_2
     room_goto(R_church_7);
 
+// -------------------------------------------------------------------2nd Area-----------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------Hunt----------------------------------------------------------------------------------- 
+
+if room= R_Hunt_stairwell_1
+    room_goto(R_Hunt_stairwell_2);
+
+if room= R_Hunt_stairwell_3
+    room_goto(R_Hunt_phone_1);
+
+if room= R_Hunt_stairwell_5
+    room_goto(R_Hunt_stairwell_4);
+
+if room= R_Hunt_phone_1
+    room_goto(R_Hunt_phone_2);
+
+if room= R_Hunt_phone_2
+    room_goto(R_Hunt_TV_1);
+
+if room= R_Hunt_phone_5
+    room_goto(R_Hunt_phone_3);
+
+if room= R_Hunt_TV_2
+        room_goto(R_Hunt_TV_3);
+
+if room= R_Hunt_TV_2_on
+        room_goto(R_Hunt_TV_3_on);
+
+if room= R_Hunt_TV_3
+        room_goto(R_Hunt_TV_4);
+
+if room= R_Hunt_TV_4
+        room_goto(R_Hunt_TVKitchen_1);
+
+if room= R_Hunt_TV_7
+    room_goto(R_Hunt_TV_8);
+
+if room= R_Hunt_TV_10
+    room_goto(R_Hunt_TV_6);
+
+if room= R_Hunt_TV_6
+    room_goto(R_Hunt_TV_9);
+
+
+if room= R_Hunt_TV_3_on
+    room_goto(R_Hunt_TV_4_on);
+
+if room= R_Hunt_TV_4_on
+    room_goto(R_Hunt_TV_8_flashlight_cup);
 
 
 
@@ -326,13 +403,264 @@ if room= R_church_2L_2
 
 
 
+// -------------------------------------------------------------------outside mail----------------------------------------------------------------------------------- 
+
+if room = R_mail_kitchen_3{
+    room_goto(R_mail_outside_1);
+}
+
+if room = R_mail_outside_1{
+    room_goto(R_mail_outside_2);
+}
+
+if room = R_mail_outside_2{
+    room_goto(R_mail_outside_3);
+}
+
+if room = R_mail_outside_3{
+    room_goto(R_mail_outside_4);
+}
+
+if room = R_mail_outside_4{
+    room_goto(R_mail_outside_5);
+}
+
+if room = R_mail_outside_5{
+    room_goto(R_mail_outside_6);
+}
+
+if room = R_mail_outside_6{
+    room_goto(R_mail_outside_7);
+}
+
+if room = R_mail_outside_7{
+    room_goto(R_mail_outside_8);
+}
+
+if room = R_mail_outside_8{
+    room_goto(R_mail_outside_9);
+}
+
+if room = R_mail_outside_9{
+    room_goto(R_mail_outside_10);
+}
+
+if room = R_mail_outside_10{
+    room_goto(R_mail_outside_11);
+}
+
+// -------------------------------------------------------------------Slender Forest------------------------------------------------------------------------------
+
+if room = R_slender_forest_end_1{
+    room_goto(R_slender_forest_end_2);
+}
+
+if room = R_slender_forest_end_2{
+    room_goto(R_slender_forest_end_3);
+}
+
+if room = R_slender_forest_end_3{
+    room_goto(R_slender_forest_end_4);
+}
+
+if room = R_slender_forest_end_4{
+    room_goto(R_slender_forest_end_cutscene);
+    global.taskComplete_run=true;
+}
+
+if room = R_slender_forest{
+    global.slender_moved= false;
+}
+
+
+// -------------------------------------------------------------------old house------------------------------------------------------------------------------
+
+if room = R_dining_1{
+    room_goto(R_dining_2);
+}
+
+if room = R_dining_2{
+    if global.taskComplete_answerPhone1=true{
+        if global.taskComplete_unlockDiningDoor= false{
+                if global.taskComplete_checkMailbox=true{
+                    room_goto(R_dining_door);
+                }
+                
+            }
+            else{
+                if global.taskComplete_restorePower= false{
+                    room_goto(R_dining_door_open_off);
+                }
+                if global.taskComplete_restorePower= true{
+                        room_goto(R_dining_door_open_on);
+                    }
+                
+                
+            }
+    }
+}
+
+if room = R_dining_door_open_off{
+    room_goto(R_old_off_1);
+}
+
+if room = R_old_off_2{
+    room_goto(R_old_off_3);
+}
+
+if room = R_old_off_3{
+    room_goto(R_old_off_4);
+}
+
+if room = R_old_off_4{
+    room_goto(R_old_off_5);
+}
+
+if room = R_old_off_5{
+    room_goto(R_old_off_6);
+}
+
+if room = R_old_off_6{
+    room_goto(R_old_off_7);
+}
+
+if room = R_old_off_7{
+    room_goto(R_old_off_8);
+}
+
+if room = R_old_off_8{
+    room_goto(R_old_off_9);
+}
+
+if room = R_old_off_9{
+    room_goto(R_old_off_10);
+}
+
+if room = R_old_off_10{
+    room_goto(R_old_off_11);
+}
+
+if room = R_old_off_11{
+    room_goto(R_old_off_12);
+}
+
+if room = R_old_off_12{
+    room_goto(R_old_off_13);
+}
+
+if room = R_old_off_13{
+    room_goto(R_old_off_14);
+}
+
+if room = R_old_off_14{
+    room_goto(R_old_off_15);
+}
+
+if room = R_old_off_15{
+    room_goto(R_old_off_16);
+}
+
+if room = R_old_off_16{
+    room_goto(R_old_breaker_closed_off);
+}
+
+
+if room = R_dining_4{
+    
+    if global.taskComplete_makeTea5=true{
+        room_goto(R_Hunt_TV_2_on);
+    }
+    
+    if global.taskComplete_makeTea5=false{
+         room_goto(R_Hunt_TV_2);
+    }
+}
+
+
+if room = R_dining_3{
+    room_goto(R_dining_4);
+}
 
 
 
+if room= R_old_on_1{
+    room_goto(R_old_on_2);
+}
 
+if room= R_old_on_2{
+    room_goto(R_old_on_3);
+}
 
+if room= R_old_on_3{
+    room_goto(R_old_on_4);
+}
 
+if room= R_old_on_4{
+    room_goto(R_old_on_5);
+}
 
+if room= R_old_on_5{
+    room_goto(R_old_on_6);
+}
 
+if room= R_old_on_6{
+    room_goto(R_old_on_7);
+}
 
+if room= R_old_on_7{
+    room_goto(R_old_on_8);
+}
 
+if room= R_old_on_8{
+    room_goto(R_old_on_9);
+}
+
+if room= R_old_on_9{
+    room_goto(R_old_on_10);
+}
+
+if room= R_old_on_10{
+    room_goto(R_old_on_11);
+}
+
+if room= R_old_on_11{
+    room_goto(R_old_on_12);
+}
+
+if room= R_old_on_12{
+    room_goto(R_old_on_13);
+}
+
+if room= R_old_on_13{
+    room_goto(R_old_on_14);
+}
+
+if room= R_old_on_14{
+    room_goto(R_old_on_15);
+}
+
+if room= R_old_on_15{
+    room_goto(R_old_on_16);
+}
+
+if room= R_old_on_16{
+    room_goto(R_old_on_17);
+}
+
+if room= R_old_on_18{
+    if global.taskComplete_answerPhone2=false{
+        room_goto(R_old_on_24);
+    }
+    if global.taskComplete_answerPhone2=true{
+        room_goto(R_old_on_19);
+        }
+    
+}
+
+if room = R_old_on_24{
+    room_goto(R_old_on_phone_0);
+}
+
+if room= R_old_on_19{
+    room_goto(R_old_on_20);
+}
